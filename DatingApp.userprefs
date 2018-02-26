@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{883936A1-9E26-4968-AFB3-4286C39BB77F}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="DatingApp.API/Controllers/ValuesController.cs">
+    <Files>
+      <File FileName="DatingApp.API/Program.cs" Line="17" Column="1" />
+      <File FileName="DatingApp.API/Startup.cs" Line="28" Column="71" />
+      <File FileName="DatingApp.API/appsettings.json" Line="3" Column="34" />
+      <File FileName="DatingApp.API/Models/Value.cs" Line="9" Column="9" />
+      <File FileName="DatingApp.API/Data/DataContext.cs" Line="4" Column="1" />
+      <File FileName="DatingApp.API/DatingApp.API.csproj" Line="1" Column="1" />
+      <File FileName="DatingApp.API/Migrations/20180226063606_InitialCreate.cs" Line="1" Column="1" />
+      <File FileName="DatingApp.API/Migrations/20180226063606_InitialCreate.Designer.cs" Line="1" Column="1" />
+      <File FileName="DatingApp.API/Migrations/DataContextModelSnapshot.cs" Line="1" Column="1" />
+      <File FileName="DatingApp.API/Controllers/ValuesController.cs" Line="27" Column="9" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.DatingApp.API PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
