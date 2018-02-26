@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatingApp.API", "DatingApp.API\DatingApp.API.csproj", "{883936A1-9E26-4968-AFB3-4286C39BB77F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F33CDB45-05F0-493D-9B22-C62686A3F925}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatingApp.SPA", "DatingApp.SPA\DatingApp.SPA.csproj", "{40F7EB67-4AF1-4C36-A0D1-8E1EEE306C9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +17,9 @@ Global
 		{883936A1-9E26-4968-AFB3-4286C39BB77F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{883936A1-9E26-4968-AFB3-4286C39BB77F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{883936A1-9E26-4968-AFB3-4286C39BB77F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40F7EB67-4AF1-4C36-A0D1-8E1EEE306C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40F7EB67-4AF1-4C36-A0D1-8E1EEE306C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40F7EB67-4AF1-4C36-A0D1-8E1EEE306C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40F7EB67-4AF1-4C36-A0D1-8E1EEE306C9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
