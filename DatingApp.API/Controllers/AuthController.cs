@@ -31,7 +31,10 @@ namespace DatingApp.API.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] UserForRegisterDto userForRegisterDto) 
         {
-            userForRegisterDto.Username = userForRegisterDto.Username.ToLower();
+            // wish I had the ruby operators here!
+            if (!string.IsNullOrEmpty(userForRegisterDto.Username)) {
+                userForRegisterDto.Username = userForRegisterDto.Username.ToLower();
+            }
 
             if (await _repo.UserExistsAsync(userForRegisterDto.Username))
                 ModelState.AddModelError("Username", "Username is already taken");
