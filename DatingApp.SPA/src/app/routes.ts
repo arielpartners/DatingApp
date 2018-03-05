@@ -14,7 +14,7 @@ export const appRoutes: Routes = [
         children: [
             { path: 'members', component: MemberListComponent },
             { path: 'messages', component: MessagesComponent },
-            { path: 'lists', component: ListsComponent } 
+            { path: 'lists', component: ListsComponent }
         ]
     },
     { path: '**', redirectTo: 'home', pathMatch: 'full' }
