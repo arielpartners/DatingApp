@@ -17,6 +17,7 @@ namespace DatingApp.API.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
+                .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
                 .HasAnnotation("ProductVersion", "2.0.1-rtm-125");
 
             modelBuilder.Entity("DatingApp.API.Models.Like", b =>
@@ -45,11 +46,9 @@ namespace DatingApp.API.Migrations
 
                     b.Property<DateTime>("MessageSent");
 
-                    b.Property<int>("ReceipientId");
-
                     b.Property<bool>("RecipientDeleted");
 
-                    b.Property<int?>("RecipientId");
+                    b.Property<int>("RecipientId");
 
                     b.Property<bool>("SenderDeleted");
 

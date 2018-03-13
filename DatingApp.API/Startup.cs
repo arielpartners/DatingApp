@@ -35,9 +35,12 @@ namespace DatingApp.API
         public void ConfigureServices(IServiceCollection services)
         {
             var key = Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:Token").Value);
-            services.AddDbContext<DataContext>(x => x
-                .UseSqlite(Configuration.GetConnectionString("DefaultConnection"))
-                .ConfigureWarnings(warnings => warnings.Ignore(CoreEventId.IncludeIgnoredWarning)));
+            //services.AddDbContext<DataContext>(x => x
+            //    .UseSqlite(Configuration.GetConnectionString("DefaultConnection"))
+            //    .ConfigureWarnings(warnings => warnings.Ignore(CoreEventId.IncludeIgnoredWarning)));
+            var connectionString = Configuration.GetConnectionString("DefaultConnection");
+            services.AddEntityFrameworkNpgsql().AddDbContext<DataContext>(options =>
+                options.UseNpgsql(connectionString));
             services.AddTransient<Seed>();
             services.AddCors();
             services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
