@@ -24,7 +24,9 @@ namespace DatingApp.API.Helpers
 
         public static async Task<PagedList<T>> CreateAsync(IQueryable<T> source, int pageNumber, int pageSize)
         {
+            // this line causes a spurious warning to happen about ignored includes
             var count = await source.CountAsync();
+            
             var items = await source.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
             return new PagedList<T>(items, count, pageNumber, pageSize);
         }

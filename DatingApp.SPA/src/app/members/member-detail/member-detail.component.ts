@@ -27,7 +27,8 @@ export class MemberDetailComponent implements OnInit {
     });
     // activate the member tab when we go to the page
     this.route.queryParams.subscribe(params => {
-      this.memberTabs.tabs[params['tab']].active = true;
+      const selectedTab = params['tab'];
+      this.memberTabs.tabs[selectedTab > 0 ? selectedTab : 0].active = true;
     });
 
     this.galleryOptions = [{

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -110,8 +111,14 @@ namespace DatingApp.API.Data
 
             if (userParams.MinAge != 18 || userParams.MaxAge != 99)
             {
-                users = users.Where(u => u.DateOfBirth.CalculateAge() >= userParams.MinAge
-                    && u.DateOfBirth.CalculateAge() <= userParams.MaxAge);
+                //users = users.Where(u => u.DateOfBirth.CalculateAge() >= userParams.MinAge
+                //    && u.DateOfBirth.CalculateAge() <= userParams.MaxAge);
+                // the above is not translatable to SQL, changing to below
+
+                var min = DateTime.Today.AddYears(-userParams.MaxAge - 1);
+                var max = DateTime.Today.AddYears(-userParams.MinAge);
+                
+                users = users.Where(u => u.DateOfBirth >= min && u.DateOfBirth <= max);
             }
 
             if (!string.IsNullOrEmpty(userParams.OrderBy))
