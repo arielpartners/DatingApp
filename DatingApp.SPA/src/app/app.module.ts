@@ -36,6 +36,16 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorInterceptorProvider, ErrorInterceptor } from './_services/error.interceptor';
 
+// below must be exported function due to ng build --prod limitation
+export function getAccessToken(): string {
+  return localStorage.getItem('token');
+}
+
+export const jwtConfig = {
+  tokenGetter: getAccessToken,
+  whiteListedDomains: [ 'localhost:5000' ]
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,14 +76,7 @@ import { ErrorInterceptorProvider, ErrorInterceptor } from './_services/error.in
     PaginationModule.forRoot(),
     ButtonsModule.forRoot(),
     HttpClientModule,
-    JwtModule.forRoot({
-      config: {
-        tokenGetter: () => {
-          return localStorage.getItem('token');
-        },
-        whitelistedDomains: ['localhost:5000']
-      }
-    })
+    JwtModule.forRoot({ config: jwtConfig })
   ],
   providers: [
     AuthService,
