@@ -28,7 +28,7 @@
     "bootswatch": "^3.3.7",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.21",
     "ng2-file-upload": "^1.3.0",
     "ngx-bootstrap": "^2.0.2",
     "ngx-gallery": "^5.1.0",
